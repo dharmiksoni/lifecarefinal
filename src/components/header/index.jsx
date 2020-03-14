@@ -1,5 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -33,13 +34,13 @@ const Header = () => {
               </div>
               <div id="navbar" className="navbar-collapse collapse">
                 <ul className="nav navbar-nav">
-                  <li><a className="active" href="index.html">Home</a></li>
-                  <li><a data-scroll href="#about">About us</a></li>
-                  <li><a data-scroll href="#service">Services</a></li>
-                  <li><a data-scroll href="#doctors">Doctors</a></li>
-                  <li><a data-scroll href="#price">Price</a></li>
-                  <li><a data-scroll href="#testimonials">Testimonials</a></li>
-                  <li><a data-scroll href="#getintouch">Contact</a></li>
+                  <li><Link className="active" to="/">Home</Link></li>
+                  <li><Link data-scroll to="/about">About us</Link></li>
+                  <li><Link data-scroll to="/services">Services</Link></li>
+                  <li><Link data-scroll to="/doctors">Doctors</Link></li>
+                  <li><Link data-scroll to="/price">Price</Link></li>
+                  <li><Link data-scroll to="/testimonials">Testimonials</Link></li>
+                  <li><Link data-scroll to="/contact">Contact</Link></li>
                 </ul>
               </div>
             </nav>
@@ -61,4 +62,4 @@ const Header = () => {
     )
 }
 
-export default withRouter(Header);
+export default Header;
