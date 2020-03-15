@@ -139,7 +139,8 @@ header {
 }
 .serch-bar {
     float: right;
-    width: 250px;
+    width: 373px;
+    display: flex;
 }
 /** search bar **/
 #custom-search-input {
