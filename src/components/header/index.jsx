@@ -1,37 +1,19 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
-import SelectCity from './SelectCity';
-import Modal from 'react-modal';
-
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)',
-    zIndex                : 9999
-  }
-};
+import SkyLight from 'react-skylight';
 
 const Header = (props) => {
   let subtitle;
   console.log("HEader props: ", props);
+  let currentLocation = localStorage.getItem('selectedLocation');
   const { path } = props.match;
-  const [modalIsOpen,setIsOpen] = React.useState(false);
-  const openModal = () => {
-    setIsOpen(true);
-  }
- 
-  const afterOpenModal = () => {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
-  }
- 
-  const closeModal = () => {
-    setIsOpen(false);
+  const [selectedCity, setSelectedCity] = useState(currentLocation || 'Select City');
+
+  const updateSelectedCity = (cityName) => {
+    setSelectedCity(cityName);
+    subtitle.hide();
+    localStorage.setItem('selectedLocation', cityName);
   }
 
   return (
@@ -89,32 +71,21 @@ const Header = (props) => {
               </div>
               <div style={{ padding: 0, border: 'none', overflow: 'hidden', margin: '10px 0', color: 'white' }}>
                 <div className="col-md-12">
-                  <h4><i onClick={(e) => setIsOpen(true)} class="fa fa-map-marker" aria-hidden="true">  Select City</i></h4>
+                  <h4><i style={{ cursor: 'pointer' }} onClick={(e) => subtitle.show()} class="fa fa-map-marker" aria-hidden="true">  {'  ' + selectedCity}</i></h4>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <Modal
-          isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
- 
-          <h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2>
-          <button onClick={closeModal}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </Modal>
+      <SkyLight hideOnOverlayClicked ref={_subtitle => (subtitle = _subtitle)} title="Please select city">
+        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: 20 }}>
+          <div onClick={() => updateSelectedCity('Vadodara')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Vadodara</div>
+          <div onClick={() => updateSelectedCity('Surat')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Surat</div>
+          <div onClick={() => updateSelectedCity('Mumbai')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Mumbai</div>
+          <div onClick={() => updateSelectedCity('Pune')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Pune</div>
+        </div>
+      </SkyLight>
     </Fragment>
   )
 }
