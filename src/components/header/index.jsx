@@ -5,7 +5,7 @@ import SkyLight from 'react-skylight';
 
 const Header = (props) => {
   let subtitle;
-  console.log("HEader props: ", props);
+  // console.log("HEader props: ", props);
   let currentLocation = localStorage.getItem('selectedLocation');
   const { path } = props.match;
   const [selectedCity, setSelectedCity] = useState(currentLocation || 'Select City');
@@ -21,7 +21,7 @@ const Header = (props) => {
       <header>
         <div className="header-top wow fadeIn">
           <div className="container">
-            <a className="navbar-brand" href="index.html"><img src="images/logo.png" alt="image" /></a>
+            <a className="navbar-brand" href="#"><img src="images/logo.png" alt="image" /></a>
             <div className="right-header">
               <div className="header-info">
                 <div className="info-inner">
@@ -80,8 +80,8 @@ const Header = (props) => {
       </header>
       <SkyLight hideOnOverlayClicked ref={_subtitle => (subtitle = _subtitle)} title="Please select city">
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: 20 }}>
-          <div onClick={() => updateSelectedCity('Vadodara')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Vadodara</div>
-          <div onClick={() => updateSelectedCity('Surat')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Surat</div>
+          <div onClick={() => updateSelectedCity('Bangalore')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Bangalore</div>
+          <div onClick={() => updateSelectedCity('Delhi')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Delhi</div>
           <div onClick={() => updateSelectedCity('Mumbai')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Mumbai</div>
           <div onClick={() => updateSelectedCity('Pune')} style={{ border: '1px solid #000', borderRadius: '10%', padding: 10, cursor: 'pointer' }}>Pune</div>
         </div>

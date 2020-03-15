@@ -22,7 +22,8 @@ const Contact = () => {
         </div>
         <div className="contact-section">
           <div className="form-contant">
-            <form id="ajax-contact" action="assets/mailer.php" method="post">
+            <form id="ajax-contact" >
+            {/* action="assets/mailer.php" method="post" */}
               <div className="row">
                 <div className="col-md-6">
                   <div className="form-group in_name">

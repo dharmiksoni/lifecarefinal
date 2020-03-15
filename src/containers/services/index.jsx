@@ -77,7 +77,7 @@ const Services = () => {
               <div className="appointment-form">
                 <h3><span>+</span> Book Appointment</h3>
                 <div className="form">
-                  <form action="index.html">
+                  <form>
                     <fieldset>
                       <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div className="row">
