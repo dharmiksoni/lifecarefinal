@@ -35,11 +35,11 @@ const Header = () => {
               <div id="navbar" className="navbar-collapse collapse">
                 <ul className="nav navbar-nav">
                   <li><Link className="active" to="/">Home</Link></li>
-                  <li><Link data-scroll to="/about">About us</Link></li>
+                  {/* <li><Link data-scroll to="/about">About us</Link></li> */}
                   <li><Link data-scroll to="/services">Services</Link></li>
-                  <li><Link data-scroll to="/doctors">Doctors</Link></li>
-                  <li><Link data-scroll to="/price">Price</Link></li>
-                  <li><Link data-scroll to="/testimonials">Testimonials</Link></li>
+                  {/* <li><Link data-scroll to="/doctors">Doctors</Link></li> */}
+                  {/* <li><Link data-scroll to="/price">Price</Link></li> */}
+                  {/* <li><Link data-scroll to="/testimonials">Testimonials</Link></li> */}
                   <li><Link data-scroll to="/contact">Contact</Link></li>
                 </ul>
               </div>
