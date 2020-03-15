@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../../components/header';
 import TextField from '@material-ui/core/TextField';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Services = () => {
 
+  const [check, SetCheck] = useState(false);
 
   const handleClick = () => {
-
+    // SetCheck(true);
+    toast("Form submit success!")
   }
 
   return (
@@ -20,6 +23,7 @@ const Services = () => {
       <br />
       <br />
       <br />
+
             <div id="service" className="services wow fadeIn">
         <div className="container">
           <div className="row">
@@ -79,7 +83,6 @@ const Services = () => {
                         <div className="row">
                           <div className="form-group">
                             <input type="text" id="name" placeholder="Your Name"  required/>
-                            
                           </div>
                         </div>
                       </div>
@@ -137,6 +140,15 @@ const Services = () => {
                             <div className="center"><button type="submit" onClick={handleClick}>Submit</button></div>
                           </div>
                         </div>
+                        <div class="toast-body">
+                          {
+                            check === true ? 
+                            <ToastContainer />
+                            :
+                            null
+                          }
+  </div>
+
                       </div>
                     </fieldset>
                   </form>
@@ -146,7 +158,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-      {/* end section */}
     </div>
   );
 }
