@@ -13,7 +13,7 @@ const Contact = () => {
       <br />
       <br />
       <br />
-            <div id="getintouch" className="section wb wow fadeIn" style={{paddingBottom: 0}}>
+      <div id="getintouch" className="section wb wow fadeIn" style={{paddingBottom: 0}}>
         <div className="container">
           <div className="heading">
             <span className="icon-logo"><img src="images/icon-logo.png" alt="#" /></span>
