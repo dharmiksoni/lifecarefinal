@@ -140,7 +140,7 @@ const Header = props => {
         </div>
       </header>
       <SkyLight hideOnOverlayClicked ref={_subtitle => (subtitle = _subtitle)} title='Please select city'>
-        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: 20 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 10 }}>
           {get(see, 'data', []).map(locate => {
             return (
               <div
