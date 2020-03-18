@@ -16,7 +16,7 @@ const Contact = () => {
       <div id="getintouch" className="section wb wow fadeIn" style={{paddingBottom: 0}}>
         <div className="container">
           <div className="heading">
-            <span className="icon-logo"><img src="images/icon-logo.png" alt="#" /></span>
+            <span className="icon-logo"><img src="/images/icon-logo.png" alt="#" /></span>
             <h2>Get in Touch</h2>
           </div>
         </div>

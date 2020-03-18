@@ -6,7 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 const Services = () => {
 
   const [check, SetCheck] = useState(false);
-
+  console.log("test services");
+  
   const handleClick = () => {
     // SetCheck(true);
     toast("Form submit success!")
@@ -31,42 +32,42 @@ const Services = () => {
               <div className="inner-services">
                 <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                   <div className="serv">
-                    <span className="icon-service"><img src="images/service-icon1.png" alt="#" /></span>
+                    <span className="icon-service"><img src="/images/service-icon1.png" alt="#" /></span>
                     <h4>PREMIUM FACILITIES</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing.</p>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                   <div className="serv">
-                    <span className="icon-service"><img src="images/service-icon2.png" alt="#" /></span>
+                    <span className="icon-service"><img src="/images/service-icon2.png" alt="#" /></span>
                     <h4>LARGE LABORATORY</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing.</p>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                   <div className="serv">
-                    <span className="icon-service"><img src="images/service-icon3.png" alt="#" /></span>
+                    <span className="icon-service"><img src="/images/service-icon3.png" alt="#" /></span>
                     <h4>DETAILED SPECIALIST</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing.</p>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                   <div className="serv">
-                    <span className="icon-service"><img src="images/service-icon4.png" alt="#" /></span>
+                    <span className="icon-service"><img src="/images/service-icon4.png" alt="#" /></span>
                     <h4>CHILDREN CARE CENTER</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing.</p>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                   <div className="serv">
-                    <span className="icon-service"><img src="images/service-icon5.png" alt="#" /></span>
+                    <span className="icon-service"><img src="/images/service-icon5.png" alt="#" /></span>
                     <h4>FINE INFRASTRUCTURE</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing.</p>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                   <div className="serv">
-                    <span className="icon-service"><img src="images/service-icon6.png" alt="#" /></span>
+                    <span className="icon-service"><img src="/images/service-icon6.png" alt="#" /></span>
                     <h4>ANYTIME BLOOD BANK</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing.</p>
                   </div>
